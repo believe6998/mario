@@ -8,7 +8,7 @@ var step = 3;
 var accountId = 10006;
 
 var myAudio = document.createElement("audio");
-myAudio.src = './audio/bullet_shot.ogg';
+myAudio.src = './audio/smb_kick.ogg';
 document.body.appendChild(myAudio);
 
 var img = new Image();
@@ -24,7 +24,7 @@ document.onkeypress = function (e) {
             break;
         case 'KeyD':
             img.src = './Animations/SmallMario/Walking/000.png';
-
+            myAudio.play();
             x = x + step;
             break;
         case 'Space':
@@ -43,7 +43,7 @@ document.onkeypress = function (e) {
     socket.emit('clientMessage', data);
 }
 
-var socket = io.connect('http://localhost:8088', {'transports': ['websocket']});
+var socket = io.connect('http://10.22.185.116:8088', {'transports': ['websocket']});
 
 socket.on('connect', function () {
     var data = {
