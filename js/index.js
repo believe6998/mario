@@ -1,7 +1,7 @@
 var canvas = document.getElementById('myCanvas');
 var canvasContext = canvas.getContext("2d");
 var x = 20;
-var y = 450;
+var y = 285;
 var w = 40;
 var h = 40;
 var step = 3;
@@ -24,6 +24,7 @@ document.onkeypress = function (e) {
             break;
         case 'KeyD':
             img.src = './Animations/SmallMario/Walking/000.png';
+
             x = x + step;
             break;
         case 'Space':
